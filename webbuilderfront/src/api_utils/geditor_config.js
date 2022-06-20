@@ -4,6 +4,8 @@ import $ from "jquery";
 import grapesjsBlockBootstrap from "grapesjs-blocks-bootstrap4";
 import grapesjsPluginExport from "grapesjs-plugin-export";
 import grapesjsStyleBg from "grapesjs-style-bg";
+import grapesjsNavbar from "grapesjs-navbar";
+
 
 
 
@@ -33,9 +35,10 @@ const geditorConfig = (assets, pageId) => {
   $("#trait-container").html("");
 
   // Content for Preview
-  const navbar = $("#navbar");
+  const sidebar = $("#navbar");
   const mainContent = $("#main-content");
   const panelTopBar = $("#main-content > .navbar-light");
+
 
   const editor = grapesjs.init({
     container: "#editor",
@@ -61,6 +64,7 @@ const geditorConfig = (assets, pageId) => {
       grapesjsBlockBootstrap,
       grapesjsPluginExport,
       grapesjsStyleBg,
+      grapesjsNavbar
       
     ],
     pluginsOpts: {
@@ -76,24 +80,30 @@ const geditorConfig = (assets, pageId) => {
   addEditorCommand(editor);
 
   editor.on("run:preview", () => {
-    console.log("It will trigger when we click on preview icon");
-    // This will be used to hide border
+    // console.log("It will trigger when we click on preview icon");
+    // // This will be used to hide border
     editor.stopCommand("sw-visibility");
-    // This will hide the sidebar view
-    navbar.removeClass("sidebar");
-    // This will make the main-content to be full width
-    mainContent.removeClass("main-content");
+    // // This will hide the sidebar view
+    // navbar.removeClass("sidebar");
+    // // This will make the main-content to be full width
+    // mainContent.removeClass("main-content");
 
-    // This will hide top panel where we have added the button
+    // // This will hide top panel where we have added the button
     panelTopBar.addClass("d-none");
+    mainContent.addClass("previewmaincontent")
+    sidebar.addClass("removesidebar")
+    
   });
   editor.on("stop:preview", () => {
     // This event is reverse of the above event.
-    console.log("It will trigger when we click on cancel preview icon");
+    // console.log("It will trigger when we click on cancel preview icon");
     editor.runCommand("sw-visibility");
-    navbar.addClass("sidebar");
-    mainContent.addClass("main-content");
+    // navbar.addClass("sidebar");
+    // mainContent.addClass("main-content");
+    // panelTopBar.removeClass("d-none");
     panelTopBar.removeClass("d-none");
+    mainContent.removeClass("previewmaincontent")
+    sidebar.removeClass("removesidebar")
   });
   editor.on("component:selected", (component) => {
     console.log("component :>> ", component);

@@ -6,6 +6,9 @@
     position: fixed;
     overflow-y: scroll;
 }
+.removesidebar{
+    display:none;
+}
 /* #E03A3C */
 .removesidebar{
     display: none;
@@ -49,6 +52,9 @@
     width:100%;
     padding-left:20%;
 }
+.previewmaincontent{
+    padding-left:0% !important;
+}
 
 .tabs{
     height:8%;
@@ -79,7 +85,7 @@
     background-color:transparent;
     width:100%;
     height:8vh;
-    background-color:#f7f7f7
+    background-color:#f7f7f7;
 }
 
 .navtab{
@@ -89,4 +95,10 @@
     justify-content:center;
 }
 #editor{
+}
+.savebutton{
+    background-color:#ff146b;
+    color:white;
+    font-size:15px;
+    cursor:pointer
 }
