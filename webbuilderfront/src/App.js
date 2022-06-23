@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import Home from "./Home";
+import UserPages from "./Pages/UserPages";
 import Editor from "./Editor";
 import Editoraux from "./Editoraux";
 
 import { pageLoad } from "./redux/actions/pageAction";
+import CreatePage from "./Pages/CreatePage";
 
 function App() {
   const dispatch = useDispatch();
@@ -17,7 +18,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/Pages" component={UserPages}></Route>
+        <Route exact path="/CreatePage" component={CreatePage}></Route>
         <Route exact path="/editor/:pageId" component={Editoraux}></Route>
       </Switch>
     </Router>

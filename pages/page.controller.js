@@ -14,7 +14,9 @@ const {
   res.json(page);
 };
  const list = async (req, res) => {
+  console.log("bye")
   const pages = await listPages();
+  console.log(pages)
   res.json(pages);
 };
  const details = async (req, res) => {

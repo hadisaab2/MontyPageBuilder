@@ -8,6 +8,7 @@ const Pages=require('./page.modal')
   return pageResponse;
 };
  const listPages = async () => {
+  // console.log("allpages")
   const pages = await Pages.find({});
   return pages;
 };
