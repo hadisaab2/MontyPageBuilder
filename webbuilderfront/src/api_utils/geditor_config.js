@@ -5,6 +5,8 @@ import grapesjsBlockBootstrap from "grapesjs-blocks-bootstrap4";
 import grapesjsPluginExport from "grapesjs-plugin-export";
 import grapesjsStyleBg from "grapesjs-style-bg";
 import grapesjsNavbar from "grapesjs-navbar";
+// import 'grapesjs-preset-webpage/dist/grapesjs-preset-webpage.min.css'
+// import 'grapesjs-preset-webpage/dist/grapesjs-preset-webpage.min.js'
 
 
 
@@ -64,7 +66,8 @@ const geditorConfig = (assets, pageId) => {
       grapesjsBlockBootstrap,
       grapesjsPluginExport,
       grapesjsStyleBg,
-      grapesjsNavbar
+      grapesjsNavbar,
+      // 'gjs-preset-webpage'
       
     ],
     pluginsOpts: {
@@ -74,6 +77,8 @@ const geditorConfig = (assets, pageId) => {
       grapesjsBlockBootstrap: {},
       grapesjsPluginExport: {},
       grapesjsStyleBg: {},
+      // 'grapesjs-preset-webpage': {}
+
     }
   });
 

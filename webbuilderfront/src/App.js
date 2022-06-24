@@ -7,6 +7,7 @@ import Editoraux from "./Editoraux";
 
 import { pageLoad } from "./redux/actions/pageAction";
 import CreatePage from "./Pages/CreatePage";
+import "./styles/main.css"
 
 function App() {
   const dispatch = useDispatch();

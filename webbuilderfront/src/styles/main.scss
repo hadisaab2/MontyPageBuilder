@@ -121,6 +121,9 @@ html {
   background-color: #990011ff;
   color: #fcf6f5ff;
 }
+// .gjs-frame>.gjs-dashed{
+//   background-color: blue !important;
+// }
 
 .gjs-four-color,
 .gjs-four-color-h:hover {
@@ -215,6 +218,20 @@ html {
 }
 .grp-wrapper {
   background-image: url("data:image/png:base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAGUlEQVQYV2M4gwH+YwCGIasIUwhT25BVBADtzYNYrHvv4gAAAABJRU5ErkJggg==");
+}
+.gjs-row{
+  // display: flex !important;
+  // justify-content: flex-start;
+  // align-items: stretch;
+  // flex-wrap: nowrap;
+  // padding: 10px;
+  // height:none!important;
+  background-color: red;
+}
+.gjs-cell{
+  // min-height: 75px;
+  // flex-grow: 1;
+  // flex-basis: 100%;
 }
 .grp-preview {
   position: absolute;

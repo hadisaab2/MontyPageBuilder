@@ -8,6 +8,7 @@ import TopNav from "./components/TopNav";
 import geditorConfig from "./api_utils/geditor_config";
 import PageSection from "./components/PageSection";
 import "./styles/main.css";
+import $ from "jquery";
 
 import montylogo from "./assets/MONTYLOGO.png";
 
@@ -15,6 +16,17 @@ const Editoraux = () => {
   const [editor, setEditor] = useState(null);
   const [assets, setAssets] = useState([]);
   const { pageId } = useParams();
+  $('.gjs-frame').each(function(){
+    function injectCSS(){
+        $iframe.contents().find('head').append(
+            $('<link/>', { rel: 'stylesheet', href: 'iframe.css', type: 'text/css' })
+        );
+    }
+
+    var $iframe = $(this);
+    $iframe.on('load', injectCSS);
+    injectCSS();
+});
 
   const { pageStore } = useSelector((state) => state);
   const { pages } = pageStore;
