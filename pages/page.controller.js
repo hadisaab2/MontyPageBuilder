@@ -15,8 +15,6 @@ const create = async (req, res) => {
   const page = await createPage(pageBody);
   res.json(page);
 };
-
-
 const list = async (req, res) => {
   const pages = await listPages();
   res.json(pages);
@@ -40,14 +38,14 @@ const update = async (req, res) => {
 
 const changeContent = async (req, res) => {
   const { pageId } = req.params;
-  const GetId = await pageDetails(pageId);
-  var Content_HTML = req.body["mycustom-html"];
-  var Content_CSS = req.body["mycustom-css"];
-  var GiveBackUUID = GetId["Background_URL"].split("/")[4].split(".")[0];
-  html_to_image(GiveBackUUID, Content_HTML, Content_CSS);
-  var pageContent = decodeBase64Image(req.body);
-  const pageResponse = await savePageContent(pageId, pageContent);
-  res.json(pageResponse.content);
+    const GetId =await pageDetails (pageId);
+    var Content_HTML=req.body["mycustom-html"];
+    var Content_CSS=req.body["mycustom-css"];
+    var GiveBackUUID = GetId['Background_URL'].split('/')[4].split(".")[0];
+    html_to_image(GiveBackUUID,Content_HTML,Content_CSS); 
+    var pageContent = decodeBase64Image(req.body);
+    const pageResponse = await savePageContent(pageId, pageContent);
+    res.json(pageResponse.content);
 };
 
 const loadContent = async (req, res) => {
