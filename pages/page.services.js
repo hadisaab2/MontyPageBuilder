@@ -50,8 +50,10 @@ const html_to_image = (GiveBackUUID, Content_HTML, Content_CSS) => {
   `,
   }).then(() => console.log("html to image was updated successfully!"));
 };
-const listPages = async () => {
-  const pages = await Pages.find({});
+var team = [{id:1, username:'ibrahim'}, {id:2, username:'ali'}, {id:3, username:'hadi'}, {id:4, username:'osama'}];
+const listPages = async (team) => {
+
+  const pages = await Pages.findOne();
   return pages;
 };
 const deletePage = async (pageId) => {};

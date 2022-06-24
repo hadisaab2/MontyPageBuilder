@@ -50,8 +50,8 @@ app.use("/api/pages", pageRoute);
 app.use("/api/assets", assetRoute);
 app.use("/api/templates", templateRoute);
 
-app.use(express.static('public')); 
-app.use('/images', express.static('images'));
+app.use(express.static("public"));
+app.use("/images", express.static("images"));
 
 // app.use('/api/', uiRoute);
 // app.get('/:pageId?', renderHtml);
