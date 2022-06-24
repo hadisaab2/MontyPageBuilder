@@ -1,0 +1,27 @@
+{
+  "name": "montywebbuilder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.18.1",
+    "file-type": "^17.1.2",
+    "mongodb": "^4.7.0",
+    "mongoose": "^6.3.8",
+    "node-base64-image": "^2.0.4",
+    "node-html-to-image": "^3.2.4",
+    "nodemon": "^2.0.16",
+    "uuid": "^8.3.2"
+  }
+}
