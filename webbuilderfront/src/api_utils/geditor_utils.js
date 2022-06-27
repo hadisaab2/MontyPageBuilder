@@ -565,6 +565,7 @@ export const styles = [
   "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css",
   "https://unpkg.com/swiper@7/swiper-bundle.min.css",
   "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css",
+  "http://localhost:3000/gjs-frame.css"
 ];
 
 // export const toggleSidebar = (fromEditor) => {

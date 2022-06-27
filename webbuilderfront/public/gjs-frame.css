@@ -1,0 +1,17 @@
+.gjs-row {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+.gjs-cell {
+  min-height: 75px;
+  flex-grow: 1;
+  flex-basis: 100%;
+  height: unset !important;
+
+}
+.gjs-dashed img{
+  height:100%;
+}

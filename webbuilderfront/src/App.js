@@ -7,7 +7,7 @@ import Editoraux from "./Editoraux";
 
 import { pageLoad } from "./redux/actions/pageAction";
 import CreatePage from "./Pages/CreatePage";
-import "./styles/main.css"
+import "./styles/main.css";
 
 function App() {
   const dispatch = useDispatch();
@@ -19,6 +19,7 @@ function App() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/" component={UserPages}></Route>
         <Route exact path="/Pages" component={UserPages}></Route>
         <Route exact path="/CreatePage" component={CreatePage}></Route>
         <Route exact path="/editor/:pageId" component={Editoraux}></Route>

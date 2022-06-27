@@ -4,7 +4,7 @@ import { createPage } from "../redux/actions/pageAction";
 import "../styles/main.css";
 import PageContainer from "../components/PageContainer";
 import { useSelector, useDispatch } from "react-redux";
-import HomeModal from "../components/HomeModal";
+import SettingsModal from "../components/SettingsModal";
 import HomeSidebar from "../components/HomeSidebar";
 // import $ from "jquery";
 
@@ -152,7 +152,7 @@ const Home = () => {
       <div className="maindiv" id="maindiv">
         <PageContainer />
       </div>
-      <HomeModal />
+      <SettingsModal />
     </>
   );
 };
